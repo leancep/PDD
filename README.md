@@ -32,3 +32,14 @@ Y DE QUE EL EQUIPO DE SOLDADOS PERDIO A UN MIEMBRO
 SI EL CAPITAN MUERE, SURGE LA NOTIFICACION DE SU MUERTE JUNTO CON LA PERDIDA DE SU ARMA RPG
 SI EL NEMESIS ASESINA A TODO EL EQUIPO DE SOLDADOS; EL JUEGO SE DETIENE JUNTO CON UNA NOTIFICACION "GAME OVER"
 SI LOS SOLDADOS ASESINAN AL NEMESIS; EL JUEGO SE DETIENE JUNTO CON LA LEYENDA " EL NEMESIS HA MUERTO; SE HA SALVADO A LA HUMANIDAD"
+
+Patrones de diseño utilizados: 
+
+Double dispatch, para manejar la simulacion de choques entre distintas figuras. 
+
+Composite, para que todo funcione comportandose de la misma forma, es decir, el juego funciona independientemente de si juegan equipos, figuras individuales o ambas.
+
+Decorator, En el caso del AURA que se le da al Nemesis, es una clase que decora a su figura.
+
+Observers, En el caso del sistema de mensajes o de ver si finaliza el juego, se aplicaron observers que dan mensajes cuando ocurre algo.
+
